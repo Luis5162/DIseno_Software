@@ -1,6 +1,6 @@
 package mx.edu.uacm.is.autorefacsystem2;
 
 
-public class GestorTareas {
+public class Vendedor {
     
 }

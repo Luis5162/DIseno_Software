@@ -6,9 +6,9 @@ package mx.edu.uacm.is.autorefacsystem2;
  */
 public class Empleado {
     
-    private final String idEmpleado;
-    private final String nombre;
-    private final String puesto; 
+    protected String idEmpleado;
+    protected String nombre;
+    protected String puesto; 
 
     public Empleado(String idEmpleado, String nombre, String puesto) {
         this.idEmpleado = idEmpleado;
