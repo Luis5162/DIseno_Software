@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="controlador.PanelPrincipalControlador">
+   
+   <top>
+      <MenuBar>
+         <Menu text="Archivo">
+            <MenuItem fx:id="menuCerrarSesion" text="Cerrar Sesión" />
+         </Menu>
+         <Menu text="Operaciones">
+            <MenuItem fx:id="menuCrearOperacion" text="Crear Operación" />
+            <MenuItem fx:id="menuGestionarOperaciones" text="Gestionar Operaciones" />
+         </Menu>
+         <Menu text="Empleados">
+            <MenuItem fx:id="menuCrearEmpleado" text="Crear Empleado" />
+            <MenuItem text="Gestionar Empleados" />
+         </Menu>
+      </MenuBar>
+   </top>
+   
+   <center>
+      <VBox alignment="CENTER" spacing="20">
+         <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+         </padding>
+         <Label text="PANEL PRINCIPAL - Sistema General" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+         <Label fx:id="lblUsuario" style="-fx-font-size: 16;"/>
+         <Label text="Sistema de Gestión Integral" style="-fx-font-size: 14; -fx-text-fill: #666;"/>
+      </VBox>
+   </center>
+</BorderPane>
