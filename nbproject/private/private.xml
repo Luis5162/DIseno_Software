@@ -5,16 +5,15 @@
         <group>
             <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/autorefacsys/Aplicacion.java</file>
             <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/repositorio/UsuarioRepositorio.java</file>
-            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/LoginControlador.java</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/com/autorefacsys/vista/login.fxml</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/com/autorefacsys/vista/panel_principal.fxml</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/controlador/LoginControlador.java</file>
             <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/modelo/Usuario.java</file>
-            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/modelo/Rol.java</file>
-            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/modelo/Empleado.java</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/com/autorefacsys/vista/crear_operacion.fxml</file>
             <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/controlador/PanelPrincipalControlador.java</file>
             <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/servicio/AuthServicio.java</file>
-            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/repositorio/RolRepositorio.java</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/controlador/CrearOperacionControlador.java</file>
             <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/modelo/Operacion.java</file>
-            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/modelo/HorarioTrabajo.java</file>
-            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/modelo/Tarea.java</file>
         </group>
     </open-files>
 </project-private>

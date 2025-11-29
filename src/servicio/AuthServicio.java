@@ -1,7 +1,7 @@
-package com.autorefacsys.servicio;
+package servicio;
 
-import com.autorefacsys.modelo.Usuario;
-import com.autorefacsys.repositorio.UsuarioRepositorio;
+import modelo.Usuario;
+import repositorio.UsuarioRepositorio;
 
 public class AuthServicio {
     private UsuarioRepositorio usuarioRepositorio;
@@ -12,9 +12,8 @@ public class AuthServicio {
     }
     
     public boolean autenticar(String usuario, String contraseña) {
-        Usuario usuarioEncontrado = usuarioRepositorio.buscarPorUsuario(usuario);
-        if (usuarioEncontrado != null && usuarioEncontrado.validarCredenciales(usuario, contraseña)) {
-            this.usuarioLogueado = usuarioEncontrado;
+        if (usuarioRepositorio.validarCredenciales(usuario, contraseña)) {
+            this.usuarioLogueado = usuarioRepositorio.buscarAdminPorUsuario(usuario);
             return true;
         }
         return false;

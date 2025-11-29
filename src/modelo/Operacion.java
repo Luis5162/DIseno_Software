@@ -1,32 +1,27 @@
-package com.autorefacsys.modelo;
-
-import java.util.*;
+package modelo;
 
 public class Operacion {
-    private String id;
+    private int id;
     private String nombre;
     private String descripcion;
-    private EstadoOperacion estado;
-    private List<Tarea> tareas;
-    
-    public enum EstadoOperacion {
-        NO_EJECUTADA, EN_EJECUCION, PAUSADA, DETENIDA, FINALIZADA
-    }
     
     public Operacion(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.estado = EstadoOperacion.NO_EJECUTADA;
-        this.tareas = new ArrayList<>();
     }
     
     // Getters y setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
-    public EstadoOperacion getEstado() { return estado; }
-    public void setEstado(EstadoOperacion estado) { this.estado = estado; }
+    public String getDescripcion() { return descripcion; }
+    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
     
-    public void agregarTarea(Tarea tarea) {
-        this.tareas.add(tarea);
+    
+     @Override
+    public String toString() {
+        return nombre + (descripcion != null && !descripcion.isEmpty() ? " - " + descripcion : "");
     }
+    
 }

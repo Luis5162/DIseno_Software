@@ -1,26 +1,26 @@
-package com.autorefacsys.modelo;
-
-import java.util.*;
+package modelo;
 
 public class Empleado {
-    private String id;
+    private int id;
     private String nombre;
-    private String email;
-    private Rol rol;
-    private List<HorarioTrabajo> horarios;
     
-    public Empleado(String nombre, String email, Rol rol) {
+    public Empleado(String nombre) {
         this.nombre = nombre;
-        this.email = email;
-        this.rol = rol;
-        this.horarios = new ArrayList<>();
+    }
+    
+    public Empleado(int id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
     }
     
     // Getters y setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
     public String getNombre() { return nombre; }
-    public Rol getRol() { return rol; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
     
-    public void agregarHorario(HorarioTrabajo horario) {
-        this.horarios.add(horario);
+    @Override
+    public String toString() {
+        return nombre;
     }
 }

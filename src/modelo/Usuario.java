@@ -1,29 +1,30 @@
-package com.autorefacsys.modelo;
+package modelo;
 
 public class Usuario {
-    private String id;
-    private String usuario;
-    private String contraseña;
-    private String email;
-    private Rol rol;
-    private boolean activo;
+    private int id;
+    private String nombre;
+    private String contraseña; // Solo para admin
     
-    public Usuario(String usuario, String contraseña, String email, Rol rol) {
-        this.usuario = usuario;
+    // Constructor para empleados (solo nombre)
+    public Usuario(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    // Constructor para admin (con credenciales)
+    public Usuario(String nombre, String contraseña) {
+        this.nombre = nombre;
         this.contraseña = contraseña;
-        this.email = email;
-        this.rol = rol;
-        this.activo = true;
     }
     
     // Getters y setters
-    public String getUsuario() { return usuario; }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
     public String getContraseña() { return contraseña; }
-    public String getEmail() { return email; }
-    public Rol getRol() { return rol; }
-    public boolean isActivo() { return activo; }
     
-    public boolean validarCredenciales(String usuario, String contraseña) {
-        return this.usuario.equals(usuario) && this.contraseña.equals(contraseña) && this.activo;
+    // Método para validar credenciales (solo admin)
+    public boolean validarCredenciales(String contraseña) {
+        return this.contraseña != null && this.contraseña.equals(contraseña);
     }
 }
