@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="controlador.GestionOperacionesControlador"
+            prefHeight="600.0" prefWidth="800.0">
+   
+   <top>
+      <VBox spacing="10" style="-fx-background-color: #f0f0f0; -fx-padding: 15;">
+         <Label text="Asignar Operaciones a Empleados" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+         <Label text="Seleccione una tarea y un empleado para asignar" style="-fx-text-fill: #666;"/>
+      </VBox>
+   </top>
+   
+   <center>
+      <VBox spacing="20" style="-fx-padding: 20;" alignment="CENTER">
+         <HBox spacing="30" alignment="CENTER">
+            <!-- Panel de Tareas -->
+            <VBox spacing="15" style="-fx-border-color: #ddd; -fx-border-radius: 5; -fx-padding: 20; -fx-background-color: #f9f9f9;" prefWidth="350">
+               <Label text="Tareas Disponibles:" style="-fx-font-weight: bold; -fx-font-size: 16;"/>
+               <ListView fx:id="listViewTareas" prefHeight="300" prefWidth="300"/>
+               <Label fx:id="lblTareaSeleccionada" style="-fx-font-weight: bold; -fx-text-fill: #2E7D32;" wrapText="true"/>
+            </VBox>
+            
+            <!-- Panel de Empleados -->
+            <VBox spacing="15" style="-fx-border-color: #ddd; -fx-border-radius: 5; -fx-padding: 20; -fx-background-color: #f9f9f9;" prefWidth="350">
+               <Label text="Empleados Disponibles:" style="-fx-font-weight: bold; -fx-font-size: 16;"/>
+               <ListView fx:id="listViewEmpleados" prefHeight="300" prefWidth="300"/>
+               <Label fx:id="lblEmpleadoSeleccionado" style="-fx-font-weight: bold; -fx-text-fill: #1565C0;" wrapText="true"/>
+            </VBox>
+         </HBox>
+         
+         <!-- Panel de Asignación -->
+         <VBox spacing="15" style="-fx-border-color: #4CAF50; -fx-border-radius: 5; -fx-padding: 20; -fx-background-color: #E8F5E8;" prefWidth="700">
+            <Label text="Asignación Seleccionada:" style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #2E7D32;"/>
+            <HBox spacing="20" alignment="CENTER">
+               <VBox spacing="5">
+                  <Label text="Tarea:" style="-fx-font-weight: bold;"/>
+                  <Label fx:id="lblTareaFinal" text="Ninguna seleccionada" style="-fx-text-fill: #666;"/>
+               </VBox>
+               <VBox spacing="5">
+                  <Label text="Empleado:" style="-fx-font-weight: bold;"/>
+                  <Label fx:id="lblEmpleadoFinal" text="Ninguno seleccionado" style="-fx-text-fill: #666;"/>
+               </VBox>
+            </HBox>
+            
+            <Button text="Guardar Asignación" onAction="#guardarAsignacion" 
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14; -fx-padding: 10 20;"/>
+         </VBox>
+         
+         <Label fx:id="lblMensaje" style="-fx-font-weight: bold;" wrapText="true" prefWidth="700"/>
+      </VBox>
+   </center>
+   
+   <bottom>
+      <HBox spacing="10" alignment="CENTER" style="-fx-padding: 15;">
+         <Button text="Volver al Panel Principal" onAction="#volverAlPanelPrincipal" 
+                 style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-padding: 8 15;"/>
+         <Button text="Limpiar Selección" onAction="#limpiarSeleccion" 
+                 style="-fx-background-color: #ff9800; -fx-text-fill: white; -fx-padding: 8 15;"/>
+      </HBox>
+   </bottom>
+</BorderPane>
