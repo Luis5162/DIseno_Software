@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="controlador.LoginControlador">
+   
+   <center>
+      <VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);">
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+         
+         <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30;">
+            <Label text="Sistema General" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #333;">
+               <font>
+                  <Font name="Arial" />
+               </font>
+            </Label>
+            
+            <Label text="Sistema de Gestión Integral" style="-fx-text-fill: #666; -fx-font-size: 14;" />
+            <Label text="(Acceso exclusivo para Administradores)" style="-fx-text-fill: #ff4444; -fx-font-size: 12; -fx-font-weight: bold;" />
+            
+            <VBox alignment="CENTER_LEFT" spacing="10.0" prefWidth="400.0">
+               <Label text="Usuario:" style="-fx-font-weight: bold;" />
+               <TextField fx:id="txtUsuario" promptText="Ingresa tu usuario" prefWidth="400"/>
+               
+               <Label text="Contraseña:" style="-fx-font-weight: bold;" />
+               <PasswordField fx:id="txtContraseña" promptText="Ingresa tu contraseña" prefWidth="400"/>
+               
+               <Button fx:id="btnLogin" text="Iniciar Sesión" onAction="#manejarLogin" 
+                       style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 10; -fx-pref-width: 400;" />
+               
+               <Label fx:id="lblMensaje" prefWidth="400.0" wrapText="true" />
+            </VBox>
+            
+            <VBox spacing="5" style="-fx-border-color: #ddd; -fx-border-radius: 5; -fx-padding: 10; -fx-background-color: #f9f9f9;">
+               <Label text="Credenciales del Sistema:" style="-fx-font-weight: bold; -fx-text-fill: #666;" />
+               <Label text="Usuario: admin | Contraseña: admin123" style="-fx-text-fill: #666; -fx-font-size: 12;" />
+            </VBox>
+         </VBox>
+      </VBox>
+   </center>
+</BorderPane>

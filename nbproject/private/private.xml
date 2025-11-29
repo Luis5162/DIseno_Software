@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/autorefacsys/Aplicacion.java</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/repositorio/UsuarioRepositorio.java</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/com/autorefacsys/vista/login.fxml</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/com/autorefacsys/vista/panel_principal.fxml</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/controlador/LoginControlador.java</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/modelo/Usuario.java</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/com/autorefacsys/vista/crear_operacion.fxml</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/controlador/PanelPrincipalControlador.java</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/servicio/AuthServicio.java</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/controlador/CrearOperacionControlador.java</file>
+            <file>file:/C:/Users/luisk/Documentos/NetBeansProjects/AutoRefacSys/src/modelo/Operacion.java</file>
+        </group>
+    </open-files>
+</project-private>

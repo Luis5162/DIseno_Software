@@ -1,0 +1,30 @@
+/* estilos.css */
+.root {
+    -fx-font-family: 'Arial';
+}
+
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.text-field, .password-field {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+    -fx-padding: 8;
+    -fx-font-size: 14;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4CAF50;
+}

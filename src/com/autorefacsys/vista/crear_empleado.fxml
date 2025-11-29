@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="controlador.CrearEmpleadoControlador"
+            prefHeight="350.0" prefWidth="500.0">
+   
+   <top>
+      <VBox spacing="10" style="-fx-background-color: #f0f0f0; -fx-padding: 15;">
+         <Label text="Crear Nuevo Empleado" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+         <Label text="Ingrese el nombre del nuevo empleado" style="-fx-text-fill: #666;"/>
+      </VBox>
+   </top>
+   
+   <center>
+      <VBox spacing="20" style="-fx-padding: 30;" alignment="CENTER">
+         <VBox spacing="15" style="-fx-border-color: #ddd; -fx-border-radius: 5; -fx-padding: 20; -fx-background-color: #f9f9f9;">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+               <Label text="Nombre:" prefWidth="100" style="-fx-font-weight: bold;"/>
+               <TextField fx:id="txtNombreEmpleado" promptText="Nombre completo del empleado" prefWidth="300"/>
+            </HBox>
+            
+            <HBox spacing="10" alignment="CENTER">
+               <Button text="Guardar Empleado" onAction="#guardarEmpleado" 
+                       style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 15;"/>
+               <Button text="Limpiar" onAction="#limpiarFormulario" 
+                       style="-fx-background-color: #ff9800; -fx-text-fill: white; -fx-padding: 8 15;"/>
+               <Button text="Cancelar" onAction="#volverAlPanelPrincipal" 
+                       style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-padding: 8 15;"/>
+            </HBox>
+            
+            <Label fx:id="lblMensaje" style="-fx-font-weight: bold;" wrapText="true" prefWidth="400"/>
+         </VBox>
+      </VBox>
+   </center>
+</BorderPane>
