@@ -14,7 +14,8 @@
          </Menu>
          <Menu text="Operaciones">
             <MenuItem fx:id="menuCrearOperacion" text="Crear Operación" />
-            <MenuItem fx:id="menuGestionarOperaciones" text="Gestionar Operaciones" />
+            <MenuItem fx:id="menuGestionarTareas" text="Gestionar Tareas" />
+            <MenuItem fx:id="menuGestionarOperaciones" text="Asignar Tareas a Empleados" />
          </Menu>
          <Menu text="Empleados">
             <MenuItem fx:id="menuCrearEmpleado" text="Crear Empleado" />
@@ -31,6 +32,75 @@
          <Label text="PANEL PRINCIPAL - Sistema General" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
          <Label fx:id="lblUsuario" style="-fx-font-size: 16;"/>
          <Label text="Sistema de Gestión Integral" style="-fx-font-size: 14; -fx-text-fill: #666;"/>
+         
+         <!-- Panel de información del sistema -->
+         <VBox spacing="15" style="-fx-border-color: #ddd; -fx-border-radius: 10; -fx-padding: 20; -fx-background-color: #f9f9f9;" prefWidth="600">
+            <Label text="Funciones Disponibles:" style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #333;"/>
+            
+            <HBox spacing="30" alignment="CENTER">
+               <VBox spacing="10" alignment="CENTER_LEFT">
+                  <Label text="📋 Crear Operación" style="-fx-font-weight: bold;"/>
+                  <Label text="Agregar nuevas tareas al sistema" style="-fx-text-fill: #666; -fx-font-size: 12;"/>
+               </VBox>
+               
+               <VBox spacing="10" alignment="CENTER_LEFT">
+                  <Label text="🛠️ Gestionar Tareas" style="-fx-font-weight: bold;"/>
+                  <Label text="Editar y eliminar tareas existentes" style="-fx-text-fill: #666; -fx-font-size: 12;"/>
+               </VBox>
+               
+               <VBox spacing="10" alignment="CENTER_LEFT">
+                  <Label text="👥 Asignar Tareas" style="-fx-font-weight: bold;"/>
+                  <Label text="Asignar tareas a empleados" style="-fx-text-fill: #666; -fx-font-size: 12;"/>
+               </VBox>
+               
+               <VBox spacing="10" alignment="CENTER_LEFT">
+                  <Label text="➕ Crear Empleado" style="-fx-font-weight: bold;"/>
+                  <Label text="Registrar nuevos empleados" style="-fx-text-fill: #666; -fx-font-size: 12;"/>
+               </VBox>
+            </HBox>
+            
+            <Separator prefWidth="550"/>
+            
+            <HBox spacing="15" alignment="CENTER">
+               <Button text="Crear Operación" onAction="#abrirCrearOperacion" 
+                       style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 15;"/>
+               <Button text="Gestionar Tareas" onAction="#abrirGestionTareas" 
+                       style="-fx-background-color: #9C27B0; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 15;"/>
+               <Button text="Asignar Tareas" onAction="#abrirGestionOperaciones" 
+                       style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 15;"/>
+               <Button text="Crear Empleado" onAction="#abrirCrearEmpleado" 
+                       style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 15;"/>
+            </HBox>
+         </VBox>
+         
+         <!-- Panel de estadísticas rápidas -->
+         <HBox spacing="30" alignment="CENTER">
+            <VBox alignment="CENTER" spacing="5" style="-fx-border-color: #4CAF50; -fx-border-radius: 5; -fx-padding: 15; -fx-background-color: #E8F5E8;">
+               <Label text="Tareas" style="-fx-font-weight: bold; -fx-text-fill: #2E7D32;"/>
+               <Label text="Creadas" style="-fx-font-size: 12; -fx-text-fill: #666;"/>
+            </VBox>
+            
+            <VBox alignment="CENTER" spacing="5" style="-fx-border-color: #9C27B0; -fx-border-radius: 5; -fx-padding: 15; -fx-background-color: #F3E5F5;">
+               <Label text="Tareas" style="-fx-font-weight: bold; -fx-text-fill: #7B1FA2;"/>
+               <Label text="Gestionadas" style="-fx-font-size: 12; -fx-text-fill: #666;"/>
+            </VBox>
+            
+            <VBox alignment="CENTER" spacing="5" style="-fx-border-color: #2196F3; -fx-border-radius: 5; -fx-padding: 15; -fx-background-color: #E3F2FD;">
+               <Label text="Empleados" style="-fx-font-weight: bold; -fx-text-fill: #1565C0;"/>
+               <Label text="Registrados" style="-fx-font-size: 12; -fx-text-fill: #666;"/>
+            </VBox>
+            
+            <VBox alignment="CENTER" spacing="5" style="-fx-border-color: #FF9800; -fx-border-radius: 5; -fx-padding: 15; -fx-background-color: #FFF3E0;">
+               <Label text="Asignaciones" style="-fx-font-weight: bold; -fx-text-fill: #EF6C00;"/>
+               <Label text="Realizadas" style="-fx-font-size: 12; -fx-text-fill: #666;"/>
+            </VBox>
+         </HBox>
       </VBox>
    </center>
+   
+   <bottom>
+      <HBox alignment="CENTER" style="-fx-background-color: #f0f0f0; -fx-padding: 10;">
+         <Label text="Sistema General v1.0 - © 2024" style="-fx-text-fill: #666; -fx-font-size: 12;"/>
+      </HBox>
+   </bottom>
 </BorderPane>

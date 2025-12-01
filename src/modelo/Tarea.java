@@ -1,23 +1,23 @@
 package modelo;
 
+import java.time.LocalTime;
 
-public class Tarea implements Runnable{
+public class Tarea {
+    private String id;
+    private String nombre;
+    private String descripcion;
+    private Rol rolRequerido;
+    private LocalTime horaInicio;
+    private LocalTime horaFin;
     
-    String tarea;
-    
-
-    @Override
-    public void run() {
-       try{
-            System.out.println("se inicia la tarea 1"+Tarea);
-            Thread.sleep(3000);
-            System.out.println("fin de la tarea"+nombreTarea);
-            System.out.println("se inicia la tarea 1"+nombreTarea);
-            
-            
-        }catch(InterruptedException e){
-            e.printStackTrace();
+    public Tarea(String nombre, String descripcion, Rol rolRequerido) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.rolRequerido = rolRequerido;
     }
     
-    
+    // Getters y setters
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public Rol getRolRequerido() { return rolRequerido; }
 }

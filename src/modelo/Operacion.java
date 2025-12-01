@@ -17,4 +17,11 @@ public class Operacion {
     public void setNombre(String nombre) { this.nombre = nombre; }
     public String getDescripcion() { return descripcion; }
     public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+    
+    
+     @Override
+    public String toString() {
+        return nombre + (descripcion != null && !descripcion.isEmpty() ? " - " + descripcion : "");
+    }
+    
 }

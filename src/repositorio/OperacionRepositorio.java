@@ -59,6 +59,26 @@ public class OperacionRepositorio {
         return operaciones;
     }
     
+    public boolean actualizarOperacion(Operacion operacion) {
+        String sql = "UPDATE tareas SET nombre = ?, descripcion = ? WHERE id = ?";
+        
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setString(1, operacion.getNombre());
+            pstmt.setString(2, operacion.getDescripcion());
+            pstmt.setInt(3, operacion.getId());
+            
+            int affectedRows = pstmt.executeUpdate();
+            return affectedRows > 0;
+            
+        } catch (SQLException e) {
+            System.err.println("Error al actualizar operación: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
     public boolean eliminarOperacion(int id) {
         String sql = "DELETE FROM tareas WHERE id = ?";
         
